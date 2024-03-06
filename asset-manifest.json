@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/poc_kyc_web/static/css/main.b68ad182.css",
-    "main.js": "/poc_kyc_web/static/js/main.780e9884.js",
+    "main.js": "/poc_kyc_web/static/js/main.762bfaf4.js",
     "static/js/453.180ff432.chunk.js": "/poc_kyc_web/static/js/453.180ff432.chunk.js",
     "static/media/logo.svg": "/poc_kyc_web/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/poc_kyc_web/index.html",
     "main.b68ad182.css.map": "/poc_kyc_web/static/css/main.b68ad182.css.map",
-    "main.780e9884.js.map": "/poc_kyc_web/static/js/main.780e9884.js.map",
+    "main.762bfaf4.js.map": "/poc_kyc_web/static/js/main.762bfaf4.js.map",
     "453.180ff432.chunk.js.map": "/poc_kyc_web/static/js/453.180ff432.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b68ad182.css",
-    "static/js/main.780e9884.js"
+    "static/js/main.762bfaf4.js"
   ]
 }
