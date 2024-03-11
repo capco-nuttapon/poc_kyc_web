@@ -3,17 +3,58 @@ import React from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import "../../index.css";
 import "../../tailwind.css";
+import { getMobileOperatingSystem } from "../home/home";
 
 export default function SendMessage() {
   const [message, setMessage] = React.useState("");
   const [params] = useSearchParams();
 
-  function onTapSend() {
-    if (window.webkit !== undefined) {
-      window.webkit.messageHandlers.sendCallback.postMessage(
-        `{"value": "${message}"}`
-      );
+  React.useEffect(() => {
+    onScreenAppeared();
+  }, [])
+  
+  function onScreenAppeared() {
+    if (getMobileOperatingSystem() === "Android") {
+      if (window.KYC !== undefined) {
+        window.KYC.postMessage("back to BBL app");
+      }
+    } else if (getMobileOperatingSystem() === "iOS") {
+      if (window.webkit !== undefined) {
+        window.webkit.messageHandlers.sendMessageScreenAppeared.postMessage("");
+      }
     }
+  }
+
+  function onTapSend() {
+    if (getMobileOperatingSystem() === "Android") {
+      if (window.KYC !== undefined) {
+        window.KYC.postMessage("back to BBL app");
+      }
+    } else if (getMobileOperatingSystem() === "iOS") {
+      if (window.webkit !== undefined) {
+        window.webkit.messageHandlers.sendCallback.postMessage(
+          `{"value": "${message}"}`
+        );
+      }
+    }
+  }
+
+  function onTapSave() {
+    if (getMobileOperatingSystem() === "Android") {
+      if (window.KYC !== undefined) {
+        window.KYC.postMessage("back to BBL app");
+      }
+    } else if (getMobileOperatingSystem() === "iOS") {
+      if (window.webkit !== undefined) {
+        window.webkit.messageHandlers.saveCallback.postMessage("");
+      }
+    }
+  }
+
+  window.addEventListener("message", receiveMessage);
+
+  function receiveMessage(event) {
+    setMessage(event.data);
   }
 
   return (
@@ -29,6 +70,12 @@ export default function SendMessage() {
         onClick={onTapSend}
       >
         Send
+      </button>
+      <button
+        className="text-white bg-sky-600 px-4 py-1 rounded-md mb-8"
+        onClick={onTapSave}
+      >
+        Save
       </button>
       <Link
         to={"/?isPop=true" + (params.get("from") === "bbl" ? "&from=bbl" : "")}
