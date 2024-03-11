@@ -9,14 +9,14 @@ export default function SendMessage() {
   const [message, setMessage] = React.useState("");
   const [params] = useSearchParams();
 
-  React.useEffect(() => {
-    onScreenAppeared();
-  }, [])
+  // React.useEffect(() => {
+  //   onScreenAppeared();
+  // }, [])
   
   function onScreenAppeared() {
     if (getMobileOperatingSystem() === "Android") {
-      if (window.KYC !== undefined) {
-        window.KYC.postMessage("back to BBL app");
+      if (window.kyc !== undefined) {
+        window.kyc.postMessage("");
       }
     } else if (getMobileOperatingSystem() === "iOS") {
       if (window.webkit !== undefined) {
@@ -27,8 +27,8 @@ export default function SendMessage() {
 
   function onTapSend() {
     if (getMobileOperatingSystem() === "Android") {
-      if (window.KYC !== undefined) {
-        window.KYC.postMessage("back to BBL app");
+      if (window.kyc !== undefined) {
+        window.kyc.postMessage("back to BBL app");
       }
     } else if (getMobileOperatingSystem() === "iOS") {
       if (window.webkit !== undefined) {
@@ -41,8 +41,8 @@ export default function SendMessage() {
 
   function onTapSave() {
     if (getMobileOperatingSystem() === "Android") {
-      if (window.KYC !== undefined) {
-        window.KYC.postMessage("back to BBL app");
+      if (window.kyc !== undefined) {
+        window.kyc.tapSave();
       }
     } else if (getMobileOperatingSystem() === "iOS") {
       if (window.webkit !== undefined) {
