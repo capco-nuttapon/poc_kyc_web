@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/poc_kyc_web/static/css/main.90a2f5c1.css",
-    "main.js": "/poc_kyc_web/static/js/main.ee3bf6ce.js",
+    "main.css": "/poc_kyc_web/static/css/main.f5ad6fc5.css",
+    "main.js": "/poc_kyc_web/static/js/main.15037a8c.js",
     "static/js/453.180ff432.chunk.js": "/poc_kyc_web/static/js/453.180ff432.chunk.js",
     "static/media/logo.svg": "/poc_kyc_web/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/poc_kyc_web/index.html",
-    "main.90a2f5c1.css.map": "/poc_kyc_web/static/css/main.90a2f5c1.css.map",
-    "main.ee3bf6ce.js.map": "/poc_kyc_web/static/js/main.ee3bf6ce.js.map",
+    "main.f5ad6fc5.css.map": "/poc_kyc_web/static/css/main.f5ad6fc5.css.map",
+    "main.15037a8c.js.map": "/poc_kyc_web/static/js/main.15037a8c.js.map",
     "453.180ff432.chunk.js.map": "/poc_kyc_web/static/js/453.180ff432.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.90a2f5c1.css",
-    "static/js/main.ee3bf6ce.js"
+    "static/css/main.f5ad6fc5.css",
+    "static/js/main.15037a8c.js"
   ]
 }
